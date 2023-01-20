@@ -1,0 +1,7 @@
+git clone hace esto
+y esta es su salida
+
+...
+
+
+...
