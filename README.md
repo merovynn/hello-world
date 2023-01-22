@@ -28,3 +28,7 @@ git checkout main
 ## Referencias
 
 - https://git-scm.com/
+- https://github.com/gitt-3-pat/hello-world
+- https://www.gitkraken.com/learn/git/git-checkout
+- https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches
+- https://stackoverflow.com/questions/4693588/what-is-a-tracking-branch
