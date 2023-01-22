@@ -1,6 +1,12 @@
 # hello-world
 
-Un repositorio para empezar a usar Github y Github Actions con Java
+Un repositorio para empezar a usar Github y Github Actions con Java.
+
+## ¿Qué novedades presenta? P1 - Ernesto Hidalgo
+
+Hemos utilizado esta rama del repositorio original para experimentar con los principales comandos de Git. Por ello, se puede
+ver que existen dos ramas del proyecto (una secundaria creada para trabajar con checkout), un par de archivos .txt -de los cuales
+comandos.txt corresponde a una transcripción de la propia realización de la práctica-, capturas de los programas descargados y un pdf (P1_ErnestoHidalgo.pdf) que incorpora todo lo realizado en esta tarea, además de varios commits que sirvieron para incluir lo mencionado en el repositorio.
 
 ## ¿Como probar en el cloud?
 
