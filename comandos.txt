@@ -1,7 +1,66 @@
-git clone hace esto
-y esta es su salida
+### clone
 
-...
+El comando clone nos sirve para replicar un repositorio a un directorio local para así trabajar con él.
+A diferencia del fork que realizamos antes, la clonación crea una copia local completamente independiente del repositorio origen.
 
+Para probarlo en nuestro repositorio nos desplazamos a la carpeta temporal /tmp,
+en la cual situamos la copia exacta del repositorio /hello-world del que disponíamos.
 
-...
+Así, nos podemos desplazar a la clonación y comprobar su contenido, que es el mismo que teníamos en el repositorio original.
+
+### status, add, commit
+
+El comando status nos sirve para comprobar el estado de los archivos en nuestro proyecto (si se han creado, modificado o
+eliminado). A la hora de trabajar con Git, nos valdremos de los comandos add y commit para indexar los cambios y versionarlos.
+status nos permite ver en qué estado está nuestro proyecto: qué archivos han cambiado y cuáles de estos cambios se consideran
+para el siguiente commit.
+
+Así, empezamos creando un archivo pruebastatus.txt, para luego ejecutar por primera vez status.
+Ahora la rama está sincronizada, pero se menciona el nuevo archivo, todavía no considerado para el commit.
+Procedemos a utilizar add, que añadirá al index nuestro nuevo archivo.
+
+En este caso, el cambio está listo para el commit. También se podría haber indicado add <ruta-de-archivo>, ya que lo que
+consigue el punto utilizado es añadir al index todos los cambios existentes y no siempre es lo que vamos a querer.
+Una vez añadido ejecutamos commit, empaquetando los cambios y describiéndolos con un mensaje breve. El commit es como una
+“fotografía” de nuestro proyecto en este momento.
+
+### push
+
+Si nos fijamos en el último status, podemos ver que se menciona que nuestra rama está un commit por delante del repositorio
+original. Esto se debe a que, pese a haber registrado los cambios, todavía no los hemos publicado. Para ello existe el comando
+push, que actualiza el repositorio original, el que se encuentra en nuestro GitHub, con los cambios locales que hemos realizado.
+
+Al revisar el repositorio en GitHub podemos comprobar que, en efecto, el cambio se ha registrado. No solo eso; también podemos
+ver a qué commit concreto corresponde cada cambio, herramienta muy útil a la hora de elaborar proyectos modulares y/o entre
+varias personas.
+
+### checkout
+
+El último comando de entre los básicos a investigar es el comando checkout. Este sirve para cambiar entre ramas en las que
+estemos trabajando, crear nuevas y revisar antiguas versiones de estas, entre otras posibilidades.
+
+Una rama nos permite realizar cambios, o bien ver los cambios que han propuesto otros usuarios, sin necesidad de alterar el
+camino principal del programa.
+
+Comenzamos creando una rama local pruebacheckout con el comando git checkout -b /pruebacheckout. A partir de ahora, los cambios
+que realicemos los publicaremos en esta nueva rama de prueba.
+ 
+Por ejemplo, creamos un simple archivo pruebacheckout.txt. Procedemos a ejecutar el correspondiente add, commit y push.
+Si nos dirigimos al repositorio hello-world de GitHub veremos que aparecen ambas ramas. La primera, la principal, no contiene
+este último archivo, mientras que la secundaria, pruebacheckout, sí lo incluye.
+
+Y con el comando git branch -a podemos revisar qué ramas existen actualmente. Para cambiar de una a otra bastará con ejecutar
+checkout <nombre-de-rama>.
+
+### tracking branches (adicional)
+
+A modo de indagar más en este tema de las ramas, podemos hablar de un tipo concreto de ramas: las tracking branches. Estas se
+asocian a una rama remota directamente, por lo que cualquier cambio que se incluya en un push (o cualquiera que venga de un pull)
+corresponderá con la rama asociada.
+
+Para sincronizar nuestro trabajo con el de la rama remota, llamamos al fetch, que actualizará nuestra rama con aquella a la que
+se asocia. Esta funcionalidad es considerablemente útil si queremos, por ejemplo, que distintos departamentos de un mismo proyecto
+trabajen a partir de distintas ramas maestras sin dificultar el progreso del resto de equipos, que pueden tener otros fines
+en ese momento.
+
+También podría ser útil si nuestro proyecto bebe de distintos repositorios, ya que permite interactuar con estos por separado.
