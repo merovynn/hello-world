@@ -1,3 +1,5 @@
+<Nota: para ver las salidas por consola del código, consultar el pdf P1_ErnestoHidalgo>
+
 ### clone
 
 El comando clone nos sirve para replicar un repositorio a un directorio local para así trabajar con él.
